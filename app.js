@@ -25,7 +25,7 @@ function get(url, callback){
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () =>{
         if (xhr.readyState == 4 && xhr.status == 200){
-            callback(url);
+            callback(xhr.response);
         }
     };
     xhr.open('GET', url);
